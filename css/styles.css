@@ -52,6 +52,26 @@ body {
 }
 
 
+.dark-mode {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+    align-items: center;
+}
+
+
+/* Nota: Botón switch
+    1.- Primero se hizo el css .switch, que es el "fondo" del botón
+    2.- A continuación .switch::before, que es el botón en sí.
+    3.- Después se trabaja el .checkbox:checked ~ .switch:before que representa
+        el botón al hacer click sobre el botón
+    4.- Al final se trabaja en .checkbox para ocultar el checkbox */
+
+.checkbox {
+    display: none;
+}
+
+
 /* Nota: al hacer click sobre el elemento o su label
         se aplican lo siguiente */
 .checkbox:checked ~ .switch:before {
@@ -62,12 +82,12 @@ body {
 
 .switch{
     /* border: 1px solid red; */
-    height: 2.5rem;
+    height: 2.3rem;
     display: block;
     border-radius: 20px;
     background: var(--gray);
     width: 5rem;
-    padding: 0.4rem;
+    padding: 0.3rem;
     box-sizing: border-box;
     user-select: none;
 }
@@ -78,10 +98,11 @@ body {
     display: block;
     width: 1.8rem;
     height: 1.8rem;
-    background: lime;
+    /* background: #13507e; */
+    background: white;
     border-radius: 50%;
     transform: translateX(2.5rem);
-    transition: 0.4s;
+    transition: 0.3s;
     will-change: transform;
 }
 
@@ -325,6 +346,11 @@ h2 {
      .card-small-views {
          color: #8088ad;
      }
+
+     .switch {
+         background-image: linear-gradient(to right, #0c4b7a 0%, #37ce8f 100%);
+     }
+
  }
 
 
