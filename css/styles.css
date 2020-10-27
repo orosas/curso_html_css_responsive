@@ -51,6 +51,15 @@ body {
     row-gap: 2.0rem;
 }
 
+
+/* Nota: al hacer click sobre el elemento o su label
+        se aplican lo siguiente */
+.checkbox:checked ~ .switch:before {
+    /* border: 1px solid red; */
+    background: black;
+    transform: translateX(0);
+}
+
 .switch{
     /* border: 1px solid red; */
     height: 2.5rem;
@@ -60,8 +69,10 @@ body {
     width: 5rem;
     padding: 0.4rem;
     box-sizing: border-box;
+    user-select: none;
 }
 
+/* Nota: Estilos para botón del "switch" */
 .switch::before {
     content: "";
     display: block;
@@ -69,6 +80,9 @@ body {
     height: 1.8rem;
     background: lime;
     border-radius: 50%;
+    transform: translateX(2.5rem);
+    transition: 0.4s;
+    will-change: transform;
 }
 
 
