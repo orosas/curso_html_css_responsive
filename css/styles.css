@@ -3,6 +3,8 @@
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
+    color: var(--baseColor);
+    background: var(--baseBackground);
 }
 
 :root {
@@ -17,6 +19,9 @@ body {
     --gray: #5a5a5f;
     --cardGray: #f0f3fa;
     --lightGray: #f8f9fe;
+    --baseBackground: white;
+    --baseColor: #1d2029;
+
 
 }
 
@@ -126,9 +131,9 @@ body {
     padding: 1.1rem 0;
 }
 
-/* Nota: Estilo para la línea superior tipo margin de cada card */
+/* Nota: Estilo para la línea superior de color tipo margin de cada card */
 .card::before {
-    content: "";
+    content: ".card::before en styeles.css";
     height: 0.35rem;
     display: block;
     position: absolute;
@@ -324,17 +329,17 @@ h2 {
 
 /* Nota: No funciona modo oscuro con media query */
  @media (prefers-color-scheme: dark) {
-     body {
+    
+    /* Nota: Eliminado durante refactor
+    body {
          background-color: #1d2029;
          color: white;
-     }
-
-     .header {
-         background: #14161d;
-     }
+     } */
 
      :root {
          --cardGray: #252b43;
+         --baseBackground: #1d2029;
+         --baseColor: white;
          --gray: #8088ad;
          --lightGray: #1d2029;
      }

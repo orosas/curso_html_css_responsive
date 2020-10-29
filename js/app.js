@@ -14,6 +14,15 @@ if(!window.matchMedia('(prefers-color-scheme: dark)').matches) {
     console.log(elCheckbox);
 }
 
+// Nota: Con la siguiente línea se cambian los valores de CSS desde JavaScript
+//         Referencia en el video minuto 2:32:50
+// document.body.style.setProperty('--nombreDeVariable', 'valorNuevo');
+// document.body.style.setProperty('--baseBackground', 'purple');
+
+
+
+
+
 elCheckbox.addEventListener('change', function(event) {
     console.log(this.checked);
     // if (this.checked) {
