@@ -16,13 +16,15 @@ body {
     --youtube: hsl(348, 97%, 39%);
     --gray: #5a5a5f;
     --cardGray: #f0f3fa;
+    --lightGray: #f8f9fe;
 
 }
 
 /* header */
 .header {
     /* border: 2px solid red; */
-    background: #d6d7db;
+    /* background: #d6d7db; */
+    background: var(--lightGray);
     padding-bottom: 6rem;
     border-radius: 0 0 1.2rem 1.2rem;
     /* display: none; */
@@ -67,9 +69,9 @@ body {
         el botón al hacer click sobre el botón
     4.- Al final se trabaja en .checkbox para ocultar el checkbox */
 
-.checkbox {
+/* .checkbox {
     display: none;
-}
+} */
 
 
 /* Nota: al hacer click sobre el elemento o su label
@@ -308,6 +310,15 @@ h2 {
     .grid {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+
+    .header-total{
+        border: none;
+    }
+
+    .header-grid {
+        display: grid;
+        grid-template-columns: 1fr 12.5rem;
+    }
 }
 
 
@@ -325,6 +336,7 @@ h2 {
      :root {
          --cardGray: #252b43;
          --gray: #8088ad;
+         --lightGray: #1d2029;
      }
 
      .card {
@@ -356,4 +368,4 @@ h2 {
 
 
 
-/* Continuar: 1:36:05 */
+/* Continuar: 2:11:33 */
